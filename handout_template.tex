@@ -4,7 +4,7 @@
   bottom=1cm,
   left=2cm,
   right=1.5cm,
-  headheight=17pt, % as per the warning by fancyhdr
+  headheight=25.22153pt, % as per the warning by fancyhdr
   includehead,includefoot,
   heightrounded, % to avoid spurious underfull messages
 ]{geometry} 
@@ -17,8 +17,6 @@
 \usepackage{url}
 \usepackage{listings}
 
-
-
 \pagestyle{fancy}
 \fancyhf{} % clear all fields
 
@@ -29,13 +27,11 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
-
 \begin{document}
 
 \begin{center}
 	{\LARGE \textbf{Homework 1: Building ICS-OS}}
 \end{center}
-
 
 \section*{Objectives}
    At the end of this activity, you should be able to:
@@ -46,8 +42,10 @@
    \end{enumerate}   
 
 \section{Introduction}
-ICS-OS\footnote{https://github.com/srg-ics-uplb/ics-os/} is an instructional (not for production) operating system that can be used for understanding different operating system concepts. The tasks
- in this homework are from the ICS-OS Kernel Developer's Guide\footnote{https://github.com/srg-ics-uplb/ics-os/wiki/Kernel-Developer's-Guide}.
+ICS-OS\footnote{https://github.com/srg-ics-uplb/ics-os/} is an instructional (not for production) operating system that can be used for understanding different operating system concepts. An 
+operating system is no different from other software in that it is written in a programming language,  
+such as C. Later in the course, you will be modifying portions of the source code of ICS-OS to 
+apply and observe various operating system concepts. The tasks  in this homework are from the ICS-OS Kernel Developer's Guide\footnote{https://github.com/srg-ics-uplb/ics-os/wiki/Kernel-Developer's-Guide}.
 
 %\section{Prerequisites}
 
@@ -84,7 +82,8 @@ $make run-floppy
 \end{lstlisting}
 
 \subsection*{Task 4: Run ICS-OS commands}
-Once the ics-os command 
+Once the ics-os command prompt appears, type help. 
+Examine the list of commands and run two commands.
 
 %\begin{thebibliography}{9}
 %\end{thebibliography}
