@@ -12,7 +12,12 @@
 \usepackage[T1]{fontenc}
 \usepackage{microtype}
 \usepackage{fancyhdr}
+\usepackage{fancyvrb}
 \usepackage{lipsum}
+\usepackage{url}
+\usepackage{listings}
+
+
 
 \pagestyle{fancy}
 \fancyhf{} % clear all fields
@@ -33,40 +38,57 @@
 
 
 \section*{Objectives}
-   At the end of this homework, the student should be able to:
-   \begin{itemize}
-       \item build the ICS-OS kernel and disk image and
+   At the end of this activity, you should be able to:
+   \begin{enumerate}
+       \item build the ICS-OS kernel and disk image;
+       \item run ICS-OS in QEMU and
        \item run two ICS-OS commands.
-   \end{itemize}   
+   \end{enumerate}   
 
-\section{Investigation/Research}
-Put your Problem statement here! Example of a Citation\cite[p.219]{Robotics}. Here's Another Citation\cite{Flueck}
+\section{Introduction}
+ICS-OS\footnote{https://github.com/srg-ics-uplb/ics-os/} is an instructional (not for production) operating system that can be used for understanding different operating system concepts. The tasks
+ in this homework are from the ICS-OS Kernel Developer's Guide\footnote{https://github.com/srg-ics-uplb/ics-os/wiki/Kernel-Developer's-Guide}.
 
-\section{Alternative Solutions}
-\lipsum[3]
+%\section{Prerequisites}
 
-\section{Optimum Solution}
-\lipsum[4]
-% to comment sections out, use the command \ifx and \fi. Use this technique when writing your pre lab. For example, to comment something out I would do:
+\section{Deliverables}
+Perform the tasks below and capture screen shots. Submit a PDF file 
+containing the screen shots. 
 
-\section{Construction/Implementation}
-\lipsum[5]
 
-\section{Analysis \& Testing}
-\lipsum[6]
+\section{Tasks}
 
-\section{Final Evaluation}
-\lipsum[7]
+\subsection*{Task 1: Install dependencies}
+\begin{lstlisting}[language=bash,frame=single]
+$sudo apt-get update
+$sudo apt-get install build-essential nasm qemu-kvm tcc git gcc-multilib
+\end{lstlisting}
 
-\section{Attachments}
-%Make sure to change these
-Lab Notes, HelloWorld.ic, FooBar.ic
-%\fi %comment me out
+\subsection*{Task 2: Clone the repository}
+\begin{lstlisting}[language=bash,frame=single] 
+$git clone https://github.com/srg-ics-uplb/ics-os.git
+$cd ics-os/ics-os
+\end{lstlisting}
 
-\begin{thebibliography}{9}
-\bibitem{Robotics} Fred G. Martin \emph{Robotics Explorations: A Hands-On Introduction to Engineering}. New Jersey: Prentice Hall.
-\bibitem{Flueck}  Flueck, Alexander J. 2005. \emph{ECE 100}[online]. Chicago: Illinois Institute of Technology, Electrical and Computer Engineering Department, 2005 [cited 30
-August 2005]. Available from World Wide Web: (http://www.ece.iit.edu/~flueck/ece100).
-\end{thebibliography}
+\subsection*{Task 3: Build}
+Building the source code for the kernel and the distribution disk is accomplished using make. Make sure you perform steps 2-4 every time you make changes in the source code.
+\begin{lstlisting}[language=bash,frame=single] 
+$make clean
+$make
+$make floppy 
+\end{lstlisting}
+
+\subsection*{Task 4: Run}
+\begin{lstlisting}[language=bash,frame=single] 
+$make run-floppy 
+\end{lstlisting}
+
+\subsection*{Task 4: Run ICS-OS commands}
+Once the ics-os command 
+
+%\begin{thebibliography}{9}
+%\end{thebibliography}
+
+
 
 \end{document}
