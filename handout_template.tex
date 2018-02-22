@@ -42,27 +42,36 @@
    \end{enumerate}   
 
 \section{Introduction}
-ICS-OS\footnote{https://github.com/srg-ics-uplb/ics-os/} is an instructional (not for production) operating system that can be used for understanding different operating system concepts. An 
-operating system is no different from other software in that it is written in a programming language,  
+ICS-OS\footnote{https://github.com/srg-ics-uplb/ics-os/} is an instructional (not for production) operating system that can be used for understanding different operating system concepts discussed 
+in the lecture. 
+An operating system is no different from other software in that it is written in a programming language,  
 such as C. Later in the course, you will be modifying portions of the source code of ICS-OS to 
 apply and observe various operating system concepts. The tasks  in this homework are from the ICS-OS Kernel Developer's Guide\footnote{https://github.com/srg-ics-uplb/ics-os/wiki/Kernel-Developer's-Guide}.
 
-%\section{Prerequisites}
+\section{Prerequisites}
+\begin{itemize}
+  \item Ubuntu 16.04
+\end{itemize}   
+
 
 \section{Deliverables}
-Perform the tasks below and capture screen shots. Submit a PDF file 
-containing the screen shots. 
+Perform the tasks below and capture screen shots while you do them. Submit a PDF file 
+containing the screen shots. Do not forget to put your name and laboratory section. (CREDIT: 5 Lecture Quiz Points)
 
 
 \section{Tasks}
 
-\subsection*{Task 1: Install dependencies}
+\subsection*{Task 1: Install build dependencies}
+A C compiler, assembler, linker, emulator, and other tools are needed to 
+build and run ICS-OS.
+
 \begin{lstlisting}[language=bash,frame=single]
 $sudo apt-get update
 $sudo apt-get install build-essential nasm qemu-kvm tcc git gcc-multilib
 \end{lstlisting}
 
 \subsection*{Task 2: Clone the repository}
+ICS-OS is hosted on Github.
 \begin{lstlisting}[language=bash,frame=single] 
 $git clone https://github.com/srg-ics-uplb/ics-os.git
 $cd ics-os/ics-os
